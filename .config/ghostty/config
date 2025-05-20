@@ -1,0 +1,18 @@
+
+auto-update = download
+
+background-opacity = 0.88
+background-blur = true
+
+bold-is-bright = true
+
+font-family = Monaspace Neon Var
+font-size = 14
+
+macos-icon = retro
+
+quit-after-last-window-closed = true
+
+theme = light:tokyonight_moon,dark:Blue Matrix
+
+working-directory = /Users/fearnliu/spaces/
