@@ -126,7 +126,7 @@ alias proxy_off="unset https_proxy; unset http_proxy; unset all_proxy"
 alias brewup="brew update; brew upgrade; brew autoremove; brew cleanup; brew doctor"
 
 # wrap eza command
-alias lf="eza --long --classify --color=automatic --icons --all --group-directories-first --header --modified --created --git-repos-no-status --time-style=long-iso --no-filesize --no-user"
+alias lf="eza --long --classify --color=always --icons=always --hyperlink --all --group-directories-first --header --modified --created --git --git-repos --time-style=long-iso --no-filesize --no-user"
 
 # git repo dotfiles
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
