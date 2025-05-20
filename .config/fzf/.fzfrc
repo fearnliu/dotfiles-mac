@@ -1,0 +1,44 @@
+--ansi
+
+
+--style=full
+
+
+--layout=reverse-list
+--border=double
+
+
+--multi
+--highlight-line
+--pointer="👉"
+--marker="✅"
+--ellipsis="..."
+--list-border=sharp
+
+
+--prompt="$> "
+--info=inline-right
+--input-border=block
+
+
+--preview='
+if [[ -d {} ]]; then
+  (tree -a -C {} || ls -al {}) | less
+
+elif [[ -f {} ]]; then
+  mime_type=$(file --mime-type -b {})
+
+  case $mime_type in
+    image/*)
+      chafa --align="top,center" --clear --margin-bottom=4 --margin-right=4 --view-size=${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES} --colors=full {}
+      ;;
+    *)
+      bat --terminal-width $FZF_PREVIEW_COLUMNS --force-colorization --line-range=:200 {} || (cat {} | less)
+      ;;
+  esac
+else
+  echo Not a regular file or directory: {}
+fi
+'
+--preview-border=rounded
+--preview-window=right:80%:wrap
