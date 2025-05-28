@@ -34,4 +34,9 @@ export POETRY_HOME="$HOME/.local/share/pypoetry"
 # ruby
 export RUBY_YJIT_ENABLE=1
 
+# load secrets
+if [[ -f ~/.secrets ]]; then
+  source ~/.secrets
+fi
+
 ######################################## End Environment Variables Export (excluding $PATH) ########################################
