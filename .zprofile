@@ -26,6 +26,7 @@ function javahome {
 }
 
 # rust
+# should be placed before ruby
 . "$HOME/.cargo/env"
 
 # mise

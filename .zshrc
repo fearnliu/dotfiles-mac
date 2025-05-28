@@ -141,14 +141,12 @@ alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 ######################################## Begin Environment ########################################
 
 # fzf
-# https://junegunn.github.io/fzf
-export FZF_DEFAULT_COMMAND="fd --color=always --no-ignore-parent --follow --hidden --hyperlink=auto"
+export FZF_DEFAULT_COMMAND="fd --color=always --follow --hidden --hyperlink=auto"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS_FILE="$HOME/.config/fzf/.fzfrc"
 source <(fzf --zsh)
 
 # zoxide
-# https://github.com/ajeetdsouza/zoxide
 eval "$(zoxide init zsh)"
 
 ######################################## End Environment ########################################
@@ -211,6 +209,9 @@ TRAPTERM() {
 
 TRAPEXIT() {
   # at the end of the script no matter what
+  if [[ ! -o login ]]; then
+    source $HOME/.zlogout
+  fi
 }
 
 ######################################## End Trap ########################################
