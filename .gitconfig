@@ -14,7 +14,7 @@
   line-numbers = true
   navigate = true
   relative-paths = true
-  side-by-side = false
+  side-by-side = true
 
 ######################################## End Delta ########################################
 
@@ -42,14 +42,13 @@
 
 
 [diff]
-  # Activate the Git feature which are able to
-  # detect moved blocks of code and style them differently from the usual removed/added lines
+  # Activate the Git feature which are able to detect moved blocks of code
+  # and style them differently from the usual removed/added lines
   colorMoved = default
   # Automatically type "--submodule" every time you run "git diff"
   submodule = log
   # Set difftastic as the default difftool, so we don't need to specify
-  # `-t difftastic` every time.
-  # reference: https://difftastic.wilfred.me.uk/
+  # `-t difftastic` every time. https://difftastic.wilfred.me.uk
   tool = difftastic
 [difftool]
   # Run the difftool immediately, don't ask 'are you sure' each time.
@@ -120,6 +119,8 @@
 
 [user]
   useConfigOnly = true
+  email = 16191685+fearnliu@users.noreply.github.com
+  name = Fearn Liu
 
 
 [includeIf "gitdir:~/spaces/repos/github.com/"]
