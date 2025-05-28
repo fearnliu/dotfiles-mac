@@ -47,4 +47,7 @@ export PATH="$PATH:/Applications/Kaleidoscope.app/Contents/MacOS"
 # Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
+# auto remove duplicate $path
+typeset -U path
+
 ######################################## End Shell Env (including $PATH) ########################################
