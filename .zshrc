@@ -195,18 +195,6 @@ fi
 
 ######################################## Begin Trap ########################################
 
-TRAPINT() {
-  # ^C was pressed
-}
-
-TRAPQUIT() {
-  # ^\\ was pressed
-}
-
-TRAPTERM() {
-  # a 'kill' command was aimed at this program's process ID
-}
-
 TRAPEXIT() {
   # at the end of the script no matter what
   if [[ ! -o login ]]; then
